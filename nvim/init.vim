@@ -4,10 +4,12 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " Adds closing brackets, parents, etc
+" https://github.com/jiangmiao/auto-pairs
 Plug 'jiangmiao/auto-pairs'
 Plug 'machakann/vim-sandwich'
 
 " Language agnostic commenting, [count]<leader>cc
+" https://github.com/preservim/nerdcommenter 
 Plug 'scrooloose/nerdcommenter'
 
 " Auto detect spacing for existing projects 
@@ -16,6 +18,7 @@ Plug 'tpope/vim-sleuth'
 " Git icons
 Plug 'airblade/vim-gitgutter'
 
+" Better highlighting of yanked lines
 Plug 'machakann/vim-highlightedyank'
 
 " Gruvbox colors
@@ -31,7 +34,7 @@ call plug#end()
 colorscheme gruvbox
 
 " fuzzy finder key
-map ; :Files<CR>
+" map ; :Files<CR>
 
 inoremap jk <ESC>
 let mapleader = " "
@@ -50,6 +53,7 @@ function! WinMove(key)
     endif
 endfunction
 
+" Use control and vim navigation keys to create and split panels
 nnoremap <silent> <C-h> :call WinMove('h')<CR>
 nnoremap <silent> <C-j> :call WinMove('j')<CR>
 nnoremap <silent> <C-k> :call WinMove('k')<CR>
